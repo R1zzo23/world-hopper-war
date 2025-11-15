@@ -60,3 +60,41 @@ h4, h6 {
 .spaceUnder {
     padding-bottom: 1em;
 }
+
+.story-context {
+  background: #f8f9fa;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid #667eea;
+}
+
+.choice-btn {
+  padding: 18px 24px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  position: relative;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.choice-btn:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+  transform: translateX(5px);
+}
+
+.choice-btn.danger {
+  border-color: #feb2b2;
+  background: #fff5f5;
+}
+
+.choice-btn.special {
+  border-color: #fbd38d;
+  background: #fffaf0;
+}

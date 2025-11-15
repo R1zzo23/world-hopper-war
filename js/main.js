@@ -116,3 +116,8 @@ function openPage(pageName) {
 }
 
 //#endregion
+
+// When page loads, start the game
+document.addEventListener('DOMContentLoaded', () => {
+  renderLocation(gameState.currentLocation);
+});

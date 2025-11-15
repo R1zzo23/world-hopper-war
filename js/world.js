@@ -46,8 +46,8 @@ function selectPartyLeader(x) {
     //Shows character info and region info sections after party leader chosen
     document.getElementById('characterInfo').removeAttribute('hidden');
     document.getElementById('actionButtons').removeAttribute('hidden');
-    document.getElementById('tabBar').removeAttribute('hidden');
-    document.getElementById('openedPage').removeAttribute('hidden');
+    //document.getElementById('tabBar').removeAttribute('hidden');
+    //document.getElementById('openedPage').removeAttribute('hidden');
     /*document.querySelectorAll('button.attackMoveBtns').forEach(elem => {
         elem.disabled = true;
     });*/
