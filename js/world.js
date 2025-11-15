@@ -6,6 +6,7 @@ var party;
 var enemyList = [];
 //var attackButtons = document.getElementsByClassName('attackMoveBtns');
 var attackButtons = document.querySelectorAll('button.attackMoveBtns');
+// this game needs work
 
 const gameState = {
   currentLocation: 'hyrule-kingdom',
