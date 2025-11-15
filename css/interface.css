@@ -1,0 +1,62 @@
+body {
+    background-color: #050505;
+    color: rgb(235, 235, 235);
+    font-size: small;
+    font-weight: 200px;
+    font-family: monospace;
+}
+
+.actionBtns {
+    width: 70px;
+}
+
+.resourceButton, .buildingButton {  
+    width: 120px;
+}
+
+#buyHut {
+    width: 90px;
+}
+
+.scrollable {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.row-height{
+    height: 150px;
+    padding-bottom: 3px;
+}
+
+#gameText {
+    font-size: x-small;
+}
+
+button {
+    font-size: x-small;
+}
+
+.btn {
+    font-size: x-small;
+}
+
+h4, h6 {
+    text-align: center;
+
+}
+
+.yellowText {
+    color: yellow;
+}
+
+.redText {
+    color: red;
+}
+
+.greenText {
+    color: greenyellow;
+}
+
+.spaceUnder {
+    padding-bottom: 1em;
+}
