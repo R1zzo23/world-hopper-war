@@ -1,9 +1,13 @@
 body {
-    background-color: #050505;
-    color: rgb(235, 235, 235);
+    background-color: hsl(236, 64%, 57%);
+    /*color: rgb(235, 235, 235);*/
     font-size: small;
     font-weight: 200px;
     font-family: monospace;
+}
+
+.game-container {
+    background-color: white;
 }
 
 .actionBtns {
@@ -46,7 +50,7 @@ h4, h6 {
 }
 
 .yellowText {
-    color: yellow;
+    color: rgb(220, 220, 0);
 }
 
 .redText {
@@ -54,47 +58,128 @@ h4, h6 {
 }
 
 .greenText {
-    color: greenyellow;
+    color: rgb(7, 127, 35);
 }
 
 .spaceUnder {
     padding-bottom: 1em;
 }
 
+
+.text-menu {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .story-context {
-  background: #f8f9fa;
-  color: black;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  border-left: 4px solid #667eea;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #667eea;
+}
+
+.character-context {
+    background-color: #e5e4e4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #667eea;
+}
+
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.current-location, .character-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.corruption-badge {
+    background: #e53e3e;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.story-text, .character-text {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .choice-btn {
-  padding: 18px 24px;
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
-  background: white;
-  cursor: pointer;
-  text-align: left;
-  transition: all 0.2s;
-  position: relative;
-  margin-bottom: 12px;
-  width: 100%;
+    padding: 18px 24px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
 }
 
 .choice-btn:hover {
-  border-color: #667eea;
-  background: #f7fafc;
-  transform: translateX(5px);
+    border-color: #667eea;
+    background: #f7fafc;
+    transform: translateX(5px);
+}
+
+.choice-btn:active {
+    transform: translateX(5px) scale(0.98);
+}
+
+.choice-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2d3748;
+    margin-bottom: 4px;
+}
+
+.choice-description {
+    font-size: 14px;
+    color: #718096;
+}
+
+.choice-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    opacity: 0.3;
 }
 
 .choice-btn.danger {
-  border-color: #feb2b2;
-  background: #fff5f5;
+    border-color: #feb2b2;
+    background: #fff5f5;
+}
+
+.choice-btn.danger:hover {
+    border-color: #fc8181;
+    background: #fed7d7;
 }
 
 .choice-btn.special {
-  border-color: #fbd38d;
-  background: #fffaf0;
+    border-color: #fbd38d;
+    background: #fffaf0;
+}
+
+.choice-btn.special:hover {
+    border-color: #f6ad55;
+    background: #feebc8;
 }
