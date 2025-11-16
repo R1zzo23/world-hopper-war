@@ -41,10 +41,6 @@ class Person {
         this.currentHP = this.maxHP;
         this.currentMP = this.maxMP;
 
-        this.knowYourRole = () => {
-            console.log("I am a proud " + this.type + "! My skills are: negotiation (" + this.negotiation +") || training (" + this.training + ") || marketing (" + this.marketing + ")");
-        };
-
         this.addAttack = (x) => {
             var min = this.strength + x.minDamage;
             var max = this.strength + x.maxDamage;
