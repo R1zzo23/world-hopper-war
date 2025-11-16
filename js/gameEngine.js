@@ -1,5 +1,5 @@
 const gameState = {
-  currentLocation: 'kokiri-forest',
+  currentLocation: 'character-select',
   corruption: 12,
   playerHP: 100,
   playerMP: 50,

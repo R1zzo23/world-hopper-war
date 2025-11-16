@@ -1,4 +1,35 @@
 const locations = {
+  'character-select': {
+    name: 'Character Select',
+    corruption: '',
+    storyText: [
+      'Make a choice of who you will begin this journey with.',
+      'While some will be strong early, others could scale higher later.'
+    ], 
+    choices: [
+      { 
+        id: 'link',
+        title: '⚔️ Choose Link',
+        description: 'Hyrule\'s Chosen One. High attack, sword techniques, item usage',
+        type: 'characterSelect',
+        destination: 'kokiri-forest'
+      }, 
+      { 
+        id: 'mario',
+        title: '🔥 Choose Mario',
+        description: 'Hero of Mushroom Kingom. Balanced stats, fire-based abilities',
+        type: 'characterSelect',
+        destination: 'kokiri-forest'
+      }, 
+      { 
+        id: 'pikachu',
+        title: '⚡️ Choose Pikachu',
+        description: 'Electric Dynamo from Kanto. Fast, agile, volatile electric attacks',
+        type: 'characterSelect',
+        destination: 'kokiri-forest'
+      }
+    ]
+  },
   'hyrule-kingdom': {
     name: '🏰 Hyrule Kingdom',
     corruption: 45,
