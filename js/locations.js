@@ -12,21 +12,21 @@ const locations = {
         title: '⚔️ Choose Link',
         description: 'Hyrule\'s Chosen One. High attack, sword techniques, item usage',
         type: 'characterSelect',
-        destination: 'kokiri-forest'
+        destination: 'hyrule-kingdom'
       }, 
       { 
         id: 'mario',
         title: '🔥 Choose Mario',
         description: 'Hero of Mushroom Kingom. Balanced stats, fire-based abilities',
         type: 'characterSelect',
-        destination: 'kokiri-forest'
+        destination: 'mushroom-kingdom'
       }, 
       { 
         id: 'pikachu',
         title: '⚡️ Choose Pikachu',
         description: 'Electric Dynamo from Kanto. Fast, agile, volatile electric attacks',
         type: 'characterSelect',
-        destination: 'kokiri-forest'
+        destination: 'kanto'
       }
     ]
   },
@@ -58,7 +58,7 @@ const locations = {
         description: 'The castle gates are guarded by corrupted enemies.',
         type: 'story',
         destination: 'castle-gates',
-        requirement: 'complete-forest-kokiri' // Optional: lock until condition met
+        requirement: 'complete-kokiri-forest' // Optional: lock until condition met
       }
       // Add more choices...
     ]
@@ -100,6 +100,13 @@ const locations = {
         type: 'danger',
         destination: 'deku-tree',
         requirement: 'complete-woods-lost' // Optional: lock until condition met
+      }, 
+      {
+        id: 'kingdom-hyrule',
+        title: '🏰 Explore Hyrule Kingdom',
+        description: 'Leave the forest to explore the kingdom.',
+        type: 'story',
+        destination: 'hyrule-kingdom'
       }
     ]
   }
@@ -108,7 +115,7 @@ const locations = {
 
 function renderLocation(locationId) {
   const location = locations[locationId];
-  
+  console.log(gameState.completedLocations);
   // Update location header
   document.querySelector('.current-location').textContent = location.name;
   document.querySelector('.corruption-badge').textContent = `⚠️ ${location.corruption}% Corrupted`;
@@ -173,7 +180,13 @@ function handleChoice(choice) {
   
   if (choice.type === 'battle') {
     // Start a battle
-    startBattle(choice.destination);
+    //startBattle(choice.destination);
+    gameState.completedLocations.push(choice.id);
+    console.log("Completed the " + choice.id);
+    console.log(gameState.completedLocations);
+    gameState.completedLocations.push('kokiri-forest');
+    renderLocation('kokiri-forest');
+
   } 
   else if (choice.type === 'shop') {
     // Open shop
