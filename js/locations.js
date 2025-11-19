@@ -50,7 +50,8 @@ const locations = {
         title: '✨ Explore Lake Hylia',
         description: 'Hylians have spoken of strange happenings around their lake.',
         type: 'story',
-        destination: 'lake-hylia'
+        destination: 'lake-hylia', 
+        requirement: 'complete-kokiri-forest'
       },
       {
         id: 'castle-hyrule',
@@ -84,14 +85,18 @@ const locations = {
         title: '✨ Kokiri Training Center',
         description: 'Train like a Kokiri to improve one of your skills.',
         type: 'story',
-        destination: 'training-center'
+        destination: 'training-center',
+        requirement: 'complete-house-link',
+        isCleared: false
       },
       {
         id: 'woods-lost',
         title: '🌳 Explore Lost Woods',
         description: 'What secrets and evil lie in the wood?',
         type: 'battle',
-        destination: 'lost-woods'
+        destination: 'lost-woods', 
+        //requirement: 'complete-center-training',
+        isCleared: false
       }, 
       {
         id: 'tree-deku',
@@ -99,7 +104,8 @@ const locations = {
         description: 'The elder wood of Kokiri is infected with corruption.',
         type: 'danger',
         destination: 'deku-tree',
-        requirement: 'complete-woods-lost' // Optional: lock until condition met
+        requirement: 'complete-woods-lost', // Optional: lock until condition met
+        isCleared: false
       }, 
       {
         id: 'kingdom-hyrule',
@@ -141,6 +147,7 @@ function renderChoices(choices) {
   choices.forEach(choice => {
     // Check if choice is locked
     const isLocked = choice.requirement && !checkRequirement(choice.requirement);
+    const isCleared = choice.isCleared;
     
     if (isLocked) return; // Skip locked choices (or render them disabled)
     
@@ -169,7 +176,8 @@ function renderChoices(choices) {
     button.appendChild(icon);
     
     // Add click handler
-    button.addEventListener('click', () => handleChoice(choice));
+    if (choice.isCleared != true)
+      button.addEventListener('click', () => handleChoice(choice));
     
     container.appendChild(button);
   });
@@ -184,6 +192,11 @@ function handleChoice(choice) {
     gameState.completedLocations.push(choice.id);
     console.log("Completed the " + choice.id);
     console.log(gameState.completedLocations);
+    if (choice.isCleared == false) {
+      choice.isCleared = true;
+      console.log("Cleared " + choice.id);
+    }
+      
     gameState.completedLocations.push('kokiri-forest');
     renderLocation('kokiri-forest');
 
