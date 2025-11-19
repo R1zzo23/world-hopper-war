@@ -84,9 +84,9 @@ const locations = {
         id: 'center-training',
         title: '✨ Kokiri Training Center',
         description: 'Train like a Kokiri to improve one of your skills.',
-        type: 'story',
+        type: 'special',
         destination: 'training-center',
-        requirement: 'complete-house-link',
+        //requirement: 'complete-house-link',
         isCleared: false
       },
       {

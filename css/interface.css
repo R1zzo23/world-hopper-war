@@ -183,3 +183,154 @@ h4, h6 {
     border-color: #f6ad55;
     background: #feebc8;
 }
+
+.character-display {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.character-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 3px solid #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.character-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-emoji {
+  font-size: 48px;
+}
+
+.character-info {
+  flex: 1;
+}
+
+.character-name {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.character-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  min-width: 60px;
+}
+
+.stat-bar-container {
+  flex: 1;
+  height: 20px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.stat-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.hp-bar {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.mp-bar {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.stat-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  min-width: 70px;
+  text-align: right;
+}
+
+.stat-row.attributes {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.attribute {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f7fafc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.attr-icon {
+  font-size: 16px;
+}
+
+.attr-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+}
+
+.attr-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .character-display {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stat-row.attributes {
+    justify-content: center;
+  }
+}

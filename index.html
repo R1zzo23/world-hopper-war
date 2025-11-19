@@ -30,6 +30,69 @@
 				</div>
 			</div>
 			
+			<div class="game-container">
+				<!-- NEW: Character Display Box -->
+				<div class="character-display">
+					<div class="character-icon">
+					<img src="path/to/character-icon.png" alt="Character" id="characterIcon">
+					<!-- Or use emoji placeholder: -->
+					<!-- <span class="character-emoji">🦸</span> -->
+					</div>
+					
+					<div class="character-info">
+					<h3 class="character-name" id="characterName">Mario</h3>
+					
+					<div class="character-stats">
+						<div class="stat-row">
+						<div class="stat-item">
+							<span class="stat-label">❤️ HP:</span>
+							<div class="stat-bar-container">
+							<div class="stat-bar hp-bar" id="hpBar"></div>
+							</div>
+							<span class="stat-value" id="hpValue">80/100</span>
+						</div>
+						</div>
+						
+						<div class="stat-row">
+						<div class="stat-item">
+							<span class="stat-label">💙 MP:</span>
+							<div class="stat-bar-container">
+							<div class="stat-bar mp-bar" id="mpBar"></div>
+							</div>
+							<span class="stat-value" id="mpValue">45/50</span>
+						</div>
+						</div>
+						
+						<div class="stat-row attributes">
+						<div class="attribute">
+							<span class="attr-icon">⚔️</span>
+							<span class="attr-label">STR</span>
+							<span class="attr-value" id="strValue">20</span>
+						</div>
+						
+						<div class="attribute">
+							<span class="attr-icon">🛡️</span>
+							<span class="attr-label">DEF</span>
+							<span class="attr-value" id="defValue">15</span>
+						</div>
+						
+						<div class="attribute">
+							<span class="attr-icon">⚡</span>
+							<span class="attr-label">SPD</span>
+							<span class="attr-value" id="spdValue">12</span>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				
+				<!-- Your existing story-context div comes after -->
+				<div class="story-context">
+					<!-- ... -->
+				</div>
+			</div>
+
+
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="game-container" id="cardContainer">
