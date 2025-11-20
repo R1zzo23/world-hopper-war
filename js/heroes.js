@@ -1,4 +1,4 @@
-const playerCharacter = {
+var playerCharacter = {
   name: 'Link',
   icon: 'images/link.jpg', // or use emoji: '🔴'
   maxHP: 100,

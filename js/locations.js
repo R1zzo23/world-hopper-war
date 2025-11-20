@@ -211,10 +211,18 @@ function handleChoice(choice) {
   }
   else if (choice.type === 'characterSelect') {
     console.log("setting character to " + choice.id);
-    if (choice.id === "link") {
-      playerCharacter = heroes[choice.id];
-      console.log(playerCharacter);
-    }
+    playerCharacter.name = heroes[choice.id].name;
+    playerCharacter.maxHP = heroes[choice.id].maxHP;
+    playerCharacter.currentHP = heroes[choice.id].currentHP;
+    playerCharacter.maxMP = heroes[choice.id].maxMP;
+    playerCharacter.currentMP = heroes[choice.id].currentMP;
+    playerCharacter.strength = heroes[choice.id].strength;
+    playerCharacter.defense = heroes[choice.id].defense;
+    playerCharacter.speed = heroes[choice.id].speed;
+    playerCharacter.moveList = heroes[choice.id].moveList;
+    playerCharacter.itemList = heroes[choice.id].itemList;
+    console.log(playerCharacter);
+    updateCharacterDisplay(playerCharacter);
   }
   else {
     // Default: navigate to new location
