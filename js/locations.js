@@ -209,6 +209,13 @@ function handleChoice(choice) {
     // Restore HP/MP
     restAtInn();
   }
+  else if (choice.type === 'characterSelect') {
+    console.log("setting character to " + choice.id);
+    if (choice.id === "link") {
+      playerCharacter = heroes[choice.id];
+      console.log(playerCharacter);
+    }
+  }
   else {
     // Default: navigate to new location
     gameState.currentLocation = choice.destination;

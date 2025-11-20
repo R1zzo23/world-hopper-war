@@ -9,5 +9,7 @@ const gameState = {
 
 // When page loads, start the game
 document.addEventListener('DOMContentLoaded', () => {
+  updateCharacterDisplay(playerCharacter);
   renderLocation(gameState.currentLocation);
 });
+

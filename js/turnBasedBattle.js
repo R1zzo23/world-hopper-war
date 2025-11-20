@@ -92,22 +92,27 @@ class Character {
     
     if (this.currentHP === 0) this.isAlive = false;
     
+    updateCharacterDisplay(playerCharacter);
+
     return {
       damage: finalDamage,
       multiplier: typeMultiplier,
       effectiveness: this.getEffectivenessText(typeMultiplier)
     };
+    
   }
 
   heal(amount) {
     const healAmount = Math.min(amount, this.maxHP - this.currentHP);
     this.currentHP += healAmount;
+    updateCharacterDisplay(playerCharacter);
     return healAmount;
   }
 
   useMP(amount) {
     if (this.currentMP >= amount) {
       this.currentMP -= amount;
+      updateCharacterDisplay(playerCharacter);
       return true;
     }
     return false;
@@ -116,6 +121,7 @@ class Character {
   restoreMP(amount) {
     const restoreAmount = Math.min(amount, this.maxMP - this.currentMP);
     this.currentMP += restoreAmount;
+    updateCharacterDisplay(playerCharacter);
     return restoreAmount;
   }
 
