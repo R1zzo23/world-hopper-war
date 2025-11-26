@@ -212,6 +212,7 @@ function handleChoice(choice) {
   else if (choice.type === 'characterSelect') {
     console.log("setting character to " + choice.id);
     playerCharacter.name = heroes[choice.id].name;
+    playerCharacter.icon = heroes[choice.id].icon;
     playerCharacter.maxHP = heroes[choice.id].maxHP;
     playerCharacter.currentHP = heroes[choice.id].currentHP;
     playerCharacter.maxMP = heroes[choice.id].maxMP;

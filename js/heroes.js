@@ -15,6 +15,7 @@ var playerCharacter = {
 const heroes = {
     'link': {
         name: 'Link',
+        icon: 'images/link.jpg',
         characterSelectText: [
         'Hyrule\'s Chosen One',
         'High attack, <span class="greenText">sword</span> techniques, item usage'
@@ -31,6 +32,7 @@ const heroes = {
     }, 
     'mario': {
         name: 'Mario',
+        icon: 'images/mario.jpg',
         characterSelectText: [
         'Hero of Mushroom Kingom',
         'Balanced stats, <span class="redText">fire-based</span> abilities'
@@ -47,6 +49,7 @@ const heroes = {
     }, 
     'pikachu': {
         name: 'Pikachu',
+        icon: 'images/pikachu.jpg',
         characterSelectText: [
         'Electric Dynamo from Kanto',
         'Fast, agile, <span class="yellowText">volatile</span> electric attacks'
