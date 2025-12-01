@@ -11,5 +11,6 @@ const gameState = {
 document.addEventListener('DOMContentLoaded', () => {
   updateCharacterDisplay(playerCharacter);
   renderLocation(gameState.currentLocation);
+  initDialogueListeners();
 });
 

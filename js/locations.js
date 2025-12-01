@@ -60,7 +60,27 @@ const locations = {
         type: 'story',
         destination: 'castle-gates',
         requirement: 'complete-kokiri-forest' // Optional: lock until condition met
-      }
+      },
+      {
+        id: 'talk-owl',
+        title: '🦉 Talk to Owl',
+        description: 'A wise, old Owl looking eager to share their knowledge of Hyrule with all travelers.',
+        type: 'dialogue',
+        npc: {
+          name: 'Wise Owl',
+          icon: '🦉',
+          dialogue: [
+            'Salutations! Welcome to Hyrule Kingdom...or at least what I used to know of it.',
+            'I\'ve seen this kingdom through the good times and the bad, but never like this.',
+            'I cannot stress enough that what you see might shock you as things don\'t appear to be right.',
+            'I heard rumors that defeating corrupted bosses yields special rewards. Might be worth the risk!'
+          ],
+          dialogueRepeated: [
+            'This is not the Hyrule I remember!',
+            'The world needs you to take down the corrupted bosses!'
+          ]
+        }
+      },
       // Add more choices...
     ]
   },
@@ -186,6 +206,11 @@ function renderChoices(choices) {
 function handleChoice(choice) {
   // Different actions based on choice type
   
+  if (choice.type === 'dialogue') {
+    showDialogueWithTyping(choice.npc);
+    return; // Don't navigate - just show dialogue
+  }
+
   if (choice.type === 'battle') {
     // Start a battle
     //startBattle(choice.destination);
@@ -224,6 +249,7 @@ function handleChoice(choice) {
     playerCharacter.itemList = heroes[choice.id].itemList;
     console.log(playerCharacter);
     updateCharacterDisplay(playerCharacter);
+    renderLocation(choice.destination);
   }
   else {
     // Default: navigate to new location

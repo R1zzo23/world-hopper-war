@@ -334,3 +334,151 @@ h4, h6 {
     justify-content: center;
   }
 }
+
+/* Dialogue Overlay */
+.dialogue-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s;
+}
+
+.dialogue-overlay.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dialogue-box {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dialogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.npc-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.npc-icon {
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+}
+
+.npc-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f7fafc;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.dialogue-content {
+  padding: 25px;
+  overflow-y: auto;
+  flex: 1;
+  line-height: 1.8;
+  color: #4a5568;
+  font-size: 16px;
+}
+
+.dialogue-content p {
+  margin-bottom: 15px;
+}
+
+.dialogue-content p:last-child {
+  margin-bottom: 0;
+}
+
+.dialogue-footer {
+  padding: 20px;
+  border-top: 2px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialogue-continue-btn {
+  padding: 12px 30px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dialogue-continue-btn:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.dialogue-continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Prevent body scroll when dialogue is open */
+body.dialogue-open {
+  overflow: hidden;
+}

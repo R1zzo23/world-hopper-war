@@ -112,6 +112,28 @@
 			</div>
 		</div>
 
+		<!-- Dialogue Popup -->
+		<div class="dialogue-overlay" id="dialogueOverlay">
+			<div class="dialogue-box">
+				<div class="dialogue-header">
+				<div class="npc-info">
+					<span class="npc-icon" id="npcIcon">💬</span>
+					<span class="npc-name" id="npcName">NPC Name</span>
+				</div>
+				<button class="close-btn" id="closeDialogue">✕</button>
+				</div>
+				
+				<div class="dialogue-content" id="dialogueContent">
+				<!-- NPC dialogue text will appear here -->
+				</div>
+				
+				<div class="dialogue-footer">
+				<button class="dialogue-continue-btn" id="continueDialogue">Continue</button>
+				</div>
+			</div>
+		</div>
+
+
         <!--
 		<body onload="gameStart()"></body>
 
@@ -126,6 +148,7 @@
 		<script type="text/javascript" src="js/locations.js"></script>
 		<script type="text/javascript" src="js/main.js"></script> -->
         <script type="text/javascript" src="js/locations.js"></script>
+        <script type="text/javascript" src="js/dialogue.js"></script>
         <script type="text/javascript" src="js/heroes.js"></script>
         <script type="text/javascript" src="js/gameEngine.js"></script>
 	</body>
